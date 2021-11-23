@@ -1,0 +1,32 @@
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_base_training.py 8 --work-dir ./work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training_d2init_seed_27978990_2 --options "load_from='d2_voc_base_init/mm_seed_27978990.pth'"
+python3 -m tools.models.ckpt_surgery --src1 work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training_d2init_seed_27978990_2/latest.pth --method randinit --save-dir work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training_d2init_seed_27978990
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_1shot_ft.py 8 --work-dir ./work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_1shot_ft_d2init_seed_27978990_2 --options "load_from='work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training_d2init_seed_27978990/model_reset_surgery.pth'"
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_2shot_ft.py 8 --work-dir ./work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_2shot_ft_d2init_seed_27978990_2 --options "load_from='work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training_d2init_seed_27978990/model_reset_surgery.pth'"
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_3shot_ft.py 8 --work-dir ./work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_3shot_ft_d2init_seed_27978990_2 --options "load_from='work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training_d2init_seed_27978990/model_reset_surgery.pth'"
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_5shot_ft.py 8 --work-dir ./work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_5shot_ft_d2init_seed_27978990_2 --options "load_from='work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training_d2init_seed_27978990/model_reset_surgery.pth'"
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_10shot_ft.py 8 --work-dir ./work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_10shot_ft_d2init_seed_27978990_2 --options "load_from='work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training_d2init_seed_27978990/model_reset_surgery.pth'"
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_base_training.py 8 --work-dir ./work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training_d2init_seed_9889636_2 --options "load_from='d2_voc_base_init/mm_seed_9889636.pth'"
+python3 -m tools.models.ckpt_surgery --src1 work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training_d2init_seed_9889636_2/latest.pth --method randinit --save-dir work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training_d2init_seed_9889636
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_1shot_ft.py 8 --work-dir ./work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_1shot_ft_d2init_seed_9889636_2 --options "load_from='work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training_d2init_seed_9889636/model_reset_surgery.pth'"
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_2shot_ft.py 8 --work-dir ./work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_2shot_ft_d2init_seed_9889636_2 --options "load_from='work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training_d2init_seed_9889636/model_reset_surgery.pth'"
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_3shot_ft.py 8 --work-dir ./work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_3shot_ft_d2init_seed_9889636_2 --options "load_from='work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training_d2init_seed_9889636/model_reset_surgery.pth'"
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_5shot_ft.py 8 --work-dir ./work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_5shot_ft_d2init_seed_9889636_2 --options "load_from='work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training_d2init_seed_9889636/model_reset_surgery.pth'"
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_10shot_ft.py 8 --work-dir ./work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_10shot_ft_d2init_seed_9889636_2 --options "load_from='work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training_d2init_seed_9889636/model_reset_surgery.pth'"
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_base_training.py 8
+python3 -m tools.models.ckpt_surgery --src1 work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training/latest.pth --method randinit --save-dir work_dirs/tfa_faster_rcnn_r101_fpn_voc_split1_base_training
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_1shot_ft.py 8
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_2shot_ft.py 8
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_3shot_ft.py 8
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_5shot_ft.py 8
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_10shot_ft.py 8
+
+
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_1shot_ft.py 8
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_2shot_ft.py 8
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split1/tfa_faster_rcnn_r101_fpn_voc_split1_3shot_ft.py 8
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split2/tfa_faster_rcnn_r101_fpn_voc_split2_1shot_ft.py 8
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split2/tfa_faster_rcnn_r101_fpn_voc_split2_2shot_ft.py 8
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split2/tfa_faster_rcnn_r101_fpn_voc_split2_3shot_ft.py 8
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split3/tfa_faster_rcnn_r101_fpn_voc_split3_1shot_ft.py 8
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split3/tfa_faster_rcnn_r101_fpn_voc_split3_2shot_ft.py 8
+bash ./tools/detection/dist_train.sh configs/detection/tfa/voc/split3/tfa_faster_rcnn_r101_fpn_voc_split3_3shot_ft.py 8
